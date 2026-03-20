@@ -14,9 +14,8 @@ export default function Navbar() {
         shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
     >
       <nav className="flex items-center gap-8">
-        <a href="#problem" className="text-sm font-medium text-(--color-text-2) hover:text-(--color-primary) transition-colors">불편함</a>
-        <a href="#how" className="text-sm font-medium text-(--color-text-2) hover:text-(--color-primary) transition-colors">사용법</a>
-        <a href="#reviews" className="text-sm font-medium text-(--color-text-2) hover:text-(--color-primary) transition-colors">후기</a>
+        <a href="#how-it-works" className="text-sm font-medium text-(--color-text-2) hover:text-(--color-primary) transition-colors">How it works</a>
+        <a href="#example" className="text-sm font-medium text-(--color-text-2) hover:text-(--color-primary) transition-colors">Example</a>
         <a href="#faq" className="text-sm font-medium text-(--color-text-2) hover:text-(--color-primary) transition-colors">FAQ</a>
       </nav>
     </motion.header>
