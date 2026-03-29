@@ -54,9 +54,15 @@ export default function CTA() {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-3">
-          <Button variant="store" href="#">  App Store</Button>
-          <Button variant="store" href="#">▶  Google Play</Button>
-          <Button variant="store" href="#">💙  앱인토스</Button>
+          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca">
+            <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
+          </a>
+          <a href="https://apps.apple.com/us/app/peeca/id6758100118">
+            <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
+          </a>
+          <a href="#">
+            <img src="/assets/Toss.png" alt="토스 미니앱으로" className="h-11" />
+          </a>
         </motion.div>
       </motion.div>
     </section>

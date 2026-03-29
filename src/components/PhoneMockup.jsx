@@ -21,11 +21,11 @@ export default function PhoneMockup({ src, alt = '', width = 'md', glow = false 
         />
       )}
       <div
-        className={`relative ${sizeClass} rounded-[3rem] bg-black p-[10px] shadow-[0_32px_80px_rgba(0,0,0,0.22)] ring-1 ring-black/10`}
+        className={`relative ${sizeClass} rounded-[2rem] bg-black p-[8px] shadow-[0_32px_80px_rgba(0,0,0,0.22)] ring-1 ring-black/10`}
       >
         {/* 다이나믹 아일랜드 */}
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 w-[72px] h-[20px] bg-black rounded-full z-10" />
-        <div className="overflow-hidden rounded-[2.4rem]">
+        <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-[64px] h-[15px] bg-black rounded-full z-10" />
+        <div className="overflow-hidden rounded-[1.5rem]">
           <img
             src={src}
             alt={alt}
