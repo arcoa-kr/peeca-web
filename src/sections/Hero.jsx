@@ -40,7 +40,7 @@ export default function Hero() {
       {/* ③ 헤드라인 — 오른쪽 */}
       <motion.h1
         {...fadeIn(0.2)}
-        className="absolute right-[8%] top-[38%] text-right text-[clamp(2rem,5vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-text-1"
+        className="absolute left-[5%] top-[38%] text-left text-[clamp(2rem,5vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-text-1"
       >
         내 카드 고민 끝,<br />
         결제 전 5초<br />
@@ -56,10 +56,10 @@ export default function Hero() {
           이미 가진 카드 중에서, 지금 가장 유리한 카드를 찾아줘요.
         </motion.p>
         <motion.div {...fadeIn(0.5)} className="flex flex-wrap gap-3 items-center">
-          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca">
+          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
             <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
           </a>
-          <a href="https://apps.apple.com/us/app/peeca/id6758100118">
+          <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
           </a>
           <a href="#">
