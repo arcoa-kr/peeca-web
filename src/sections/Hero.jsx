@@ -31,7 +31,7 @@ export default function Hero() {
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
       >
         <img
-          src="./assets/hero-visual.png"
+          src="/assets/hero-visual.png"
           alt="peeca 앱 미리보기"
           className="w-[85%] max-w-[500px] object-contain"
         />
