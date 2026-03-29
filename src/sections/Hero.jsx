@@ -42,6 +42,7 @@ export default function Hero() {
         {...fadeIn(0.2)}
         className="absolute left-[5%] top-[38%] text-left text-[clamp(2rem,5vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-text-1"
       >
+        <p className="text-left text-[clamp(1.35rem,3vw,1rem)] mb-5">임시 디자인으로 내용만 참고 부탁드립니다.</p>
         내 카드 고민 끝,<br />
         결제 전 5초<br />
         <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #553FF3 0%, #AA9FF9 100%)' }}>
@@ -62,9 +63,11 @@ export default function Hero() {
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
           </a>
+          {/*
           <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱으로" className="h-11" />
+            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
           </a>
+          */}
         </motion.div>
       </div>
 

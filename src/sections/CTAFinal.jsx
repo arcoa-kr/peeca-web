@@ -57,9 +57,11 @@ export default function CTAFinal() {
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
           </a>
+          {/*
           <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱으로" className="h-11" />
+            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
           </a>
+          */}
         </motion.div>
       </motion.div>
     </section>
