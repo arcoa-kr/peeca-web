@@ -1,76 +1,166 @@
+import { useRef, useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
+import StoreButtons from '../components/StoreButtons'
 
-/* ── 배경 블롭 ── */
-function Blob({ style, delay = 0 }) {
-  return (
-    <motion.div
-      aria-hidden
-      className="pointer-events-none absolute rounded-full"
-      style={style}
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay }}
-    />
-  )
-}
-
-/* ── fade-in ── */
-const fadeIn = (delay) => ({
+const fadeIn = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
 })
 
 export default function Hero() {
+  const heroRef = useRef(null)
+  const [offset, setOffset] = useState({ x: 0, y: 0 })
+
+  const handleMouseMove = useCallback((e) => {
+    const rect = heroRef.current.getBoundingClientRect()
+    const x = (e.clientX - rect.left - rect.width / 2) / rect.width
+    const y = (e.clientY - rect.top - rect.height / 2) / rect.height
+    setOffset({ x, y })
+  }, [])
+
+  const handleMouseLeave = useCallback(() => {
+    setOffset({ x: 0, y: 0 })
+  }, [])
+
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-alt">
-      {/* ② 메인 비주얼 (폰 + 배경타이포 합성 PNG) */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
-      >
-        <img
-          src="/assets/hero-visual.png"
-          alt="peeca 앱 미리보기"
-          className="w-[85%] max-w-[500px] object-contain"
-        />
-      </motion.div>
+    <>
+      {/* ═══════════ PC (768px 이상) ═══════════ */}
+      <section className="hidden md:block relative w-full h-screen overflow-hidden bg-black pt-16">
+        {/* ① 배경 */}
+        <div className="absolute inset-0 pointer-events-none">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/assets/peeca_bg.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-      {/* ③ 헤드라인 — 오른쪽 */}
-      <motion.h1
-        {...fadeIn(0.2)}
-        className="absolute left-[5%] top-[38%] text-left text-[clamp(2rem,5vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-text-1"
-      >
-        <p className="text-left text-[clamp(1.35rem,3vw,1rem)] mb-5">임시 디자인으로 내용만 참고 부탁드립니다.</p>
-        내 카드 고민 끝,<br />
-        결제 전 5초<br />
-        <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #553FF3 0%, #AA9FF9 100%)' }}>
-          peeca ✦
-        </span>
-      </motion.h1>
+        {/* 컨테이너 */}
+        <div
+          ref={heroRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="relative mx-auto w-full h-full"
+          style={{ maxWidth: '1800px' }}
+        >
+          {/* ② 텍스트 배경 */}
+          <div
+            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+            style={{
+              transform: `translate(${offset.x * 32}px, ${offset.y * 32}px)`,
+              transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
+            }}
+          >
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.1 }}
+              src="/assets/peeca_txt.png"
+              alt=""
+              aria-hidden
+              style={{ width: 'clamp(1400px, 80vw, 1600px)' }}
+              className="object-contain px-8"
+            />
+          </div>
 
-      {/* ④ 서브카피 + CTA — 왼쪽 하단 */}
-      <div className="absolute left-[5%] bottom-[8%]">
-        <motion.p {...fadeIn(0.35)} className="text-base sm:text-lg leading-relaxed mb-5 text-text-2">
-          <strong className="font-semibold text-text-1">새 카드를 권유하는 앱이 아니에요.</strong><br />
-          이미 가진 카드 중에서, 지금 가장 유리한 카드를 찾아줘요.
-        </motion.p>
-        <motion.div {...fadeIn(0.5)} className="flex flex-wrap gap-3 items-center">
-          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
-            <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
-          </a>
-          <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
-            <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
-          </a>
-          {/*
-          <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
-          </a>
-          */}
-        </motion.div>
-      </div>
+          {/* ③ 목업 */}
+          <div
+            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+            style={{ perspective: '1000px' }}
+          >
+            <div
+              style={{
+                transform: `
+                  translate(${offset.x * 56}px, ${offset.y * 56}px)
+                  rotateY(${offset.x * 21}deg)
+                  rotateX(${offset.y * -21}deg)
+                `,
+                transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
+                transformStyle: 'preserve-3d',
+              }}
+            >
+              <motion.img
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                src="/assets/peeca_on.png"
+                alt="peeca 앱 미리보기"
+                className="w-[85vw] max-w-[640px] object-contain"
+              />
+            </div>
+          </div>
 
-    </section>
+          {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
+          <div
+            className="absolute left-[3%] xl:left-[5%] 2xl:left-[8.8%] top-[58%]"
+            style={{
+              transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
+              transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
+            }}
+          >
+            <motion.h1
+              {...fadeIn(0.3)}
+              className="text-left text-[1.8rem] sm:text-[2.5rem] font-semibold leading-[1.2] tracking-tight text-(--color-text-1)"
+            >
+              결제 전 5초 검색<br />
+              peeca
+            </motion.h1>
+            <div className="mt-[28px]">
+              <motion.p
+                {...fadeIn(0.4)}
+                className="text-lg leading-relaxed mb-4 text-1 font-medium"
+              >
+                지금 가장 유리한 내 카드를 찾아줘요!
+              </motion.p>
+              <motion.div {...fadeIn(0.5)}>
+                <StoreButtons />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ 모바일 (768px 미만) ═══════════ */}
+      <section className="md:hidden relative w-full min-h-screen overflow-hidden bg-black pt-16">
+        {/* 배경 */}
+        <div className="absolute inset-0 pointer-events-none">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/assets/peeca_bg.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* 콘텐츠 — 세로 중앙 정렬 */}
+        <div className="relative flex flex-col items-center justify-center min-h-screen px-6 py-10">
+          {/* 폰 목업 */}
+          <motion.img
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            src="/assets/peeca_on.png"
+            alt="peeca 앱 미리보기"
+            className="w-[95%] max-w-[360px] object-contain mb-8"
+          />
+
+          {/* 헤드라인 */}
+          <motion.h1
+            {...fadeIn(0.3)}
+            className="text-center text-[1.8rem] font-semibold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
+          >
+            결제 전 5초 검색<br />
+            peeca
+          </motion.h1>
+          <motion.p
+            {...fadeIn(0.4)}
+            className="text-center text-lg leading-relaxed mb-6 text-(--color-text-1) font-medium"
+          >
+            지금 가장 유리한 내 카드를 찾아줘요!
+          </motion.p>
+
+          {/* CTA */}
+          <motion.div {...fadeIn(0.5)}>
+            <StoreButtons compact />
+          </motion.div>
+        </div>
+      </section>
+    </>
   )
 }
