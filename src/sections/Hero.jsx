@@ -26,9 +26,9 @@ export default function Hero() {
   return (
     <>
       {/* ═══════════ PC (768px 이상) ═══════════ */}
-      <section className="hidden md:block relative w-full h-screen overflow-hidden bg-black pt-16">
+      <section className="hidden md:block relative w-full h-screen overflow-hidden bg-white pt-16">
         {/* ① 배경 */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none opacity-88">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/assets/peeca_bg.mp4" type="video/mp4" />
           </video>
@@ -91,7 +91,7 @@ export default function Hero() {
 
           {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
           <div
-            className="absolute left-[3%] xl:left-[5%] 2xl:left-[8.8%] top-[58%]"
+            className="absolute left-[3%] xl:left-[5%] 2xl:left-[10%] top-[58%]"
             style={{
               transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
@@ -107,7 +107,7 @@ export default function Hero() {
             <div className="mt-[28px]">
               <motion.p
                 {...fadeIn(0.4)}
-                className="text-lg leading-relaxed mb-4 text-1 font-medium"
+                className="text-lg leading-relaxed mb-4 text-(--color-text-1) font-medium"
               >
                 지금 가장 유리한 내 카드를 찾아줘요!
               </motion.p>
@@ -120,16 +120,20 @@ export default function Hero() {
       </section>
 
       {/* ═══════════ 모바일 (768px 미만) ═══════════ */}
-      <section className="md:hidden relative w-full min-h-screen overflow-hidden bg-black pt-16">
+      <section className="md:hidden relative w-full overflow-hidden bg-white pt-16"
+        style={{ minHeight: '100dvh' }}
+      >
         {/* 배경 */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none opacity-88">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/assets/peeca_bg.mp4" type="video/mp4" />
           </video>
         </div>
 
         {/* 콘텐츠 — 세로 중앙 정렬 */}
-        <div className="relative flex flex-col items-center justify-center min-h-screen px-6 py-10">
+        <div className="relative flex flex-col items-center justify-center px-6 py-12"
+          style={{ minHeight: '100dvh' }}
+        >
           {/* 폰 목업 */}
           <motion.img
             initial={{ opacity: 0, scale: 0.95 }}

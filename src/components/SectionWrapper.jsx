@@ -23,7 +23,7 @@ export default function SectionWrapper({
   children,
 }) {
   return (
-    <section id={id} className={`py-24 px-6 ${className}`} style={{ backgroundColor: bg }}>
+    <section id={id} className={`py-30 px-6 ${className}`} style={{ backgroundColor: bg }}>
       <div className={`${MAX_WIDTHS[maxWidth]} mx-auto ${center ? 'flex flex-col items-center text-center' : ''}`}>
         {children}
       </div>

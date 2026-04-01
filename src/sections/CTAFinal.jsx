@@ -17,7 +17,7 @@ export default function CTAFinal() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section className="relative overflow-hidden py-28 px-6 bg-white">
+    <section className="relative overflow-hidden py-33 px-6 bg-white">
       {/* 배경 블롭 */}
       <div
         aria-hidden

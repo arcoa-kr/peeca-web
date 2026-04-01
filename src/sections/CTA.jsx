@@ -17,7 +17,7 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="cta" className="relative overflow-hidden py-28 px-6">
+    <section id="cta" className="relative overflow-hidden py-33 px-6">
       {/* 배경 */}
       <div
         className="absolute inset-0"
