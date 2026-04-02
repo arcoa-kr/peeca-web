@@ -48,9 +48,8 @@ export default function Problem() {
         variants={container}
         initial="hidden"
         animate={inView ? 'show' : 'hidden'}
-        className="flex flex-col items-center text-center gap-6 w-full"
-      >
-          <span className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)">
+        className="flex flex-col items-center text-center gap-6">
+          <span className="text-xs font-semibold tracking-widest uppercase pl-3.5 pr-3 py-1 rounded-full text-(--color-primary) border-1 border-(--color-primary)">
             Problems
           </span>
         <motion.h2

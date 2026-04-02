@@ -51,11 +51,10 @@ export default function HowItWorks() {
         className="flex flex-col items-center gap-14 w-full"
       >
         {/* 상단 텍스트 */}
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-6">
           <motion.span
             variants={item}
-            className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)"
-          >
+            className="text-xs font-semibold tracking-widest uppercase pl-3.5 pr-3 py-1 rounded-full text-(--color-primary) border-1 border-(--color-primary)">
             How it works
           </motion.span>
 

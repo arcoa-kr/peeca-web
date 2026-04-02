@@ -76,8 +76,8 @@ export default function FAQ() {
         className="flex flex-col items-center gap-10 w-full"
       >
         {/* 헤드라인 */}
-        <div className="flex flex-col items-center gap-4">
-          <span className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full text-(--color-primary) border-1 border-(--color-primary)">
+        <div className="flex flex-col items-center gap-6">
+          <span className="text-xs font-semibold tracking-widest uppercase pl-3.5 pr-3 py-1 rounded-full text-(--color-primary) border-1 border-(--color-primary)">
             FAQ
           </span>
           <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold tracking-tight text-(--color-text-1)">

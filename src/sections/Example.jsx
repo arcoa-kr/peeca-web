@@ -84,11 +84,10 @@ export default function Example() {
         initial={{ opacity: 0, y: 24 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="flex flex-col items-center gap-10 w-full"
-      >
+        className="flex flex-col items-center gap-10 w-full">
         {/* 헤드라인 */}
-        <div className="flex flex-col items-center gap-4">
-          <span className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)">
+        <div className="flex flex-col items-center gap-6">
+          <span className="text-xs font-semibold tracking-widest uppercase pl-3.5 pr-3 py-1 rounded-full text-(--color-primary) border-1 border-(--color-primary)">
             Example
           </span>
           <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold tracking-tight text-(--color-text-1)">

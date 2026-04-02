@@ -41,11 +41,10 @@ export default function SocialProof() {
         className="flex flex-col items-center gap-12 w-full"
       >
         {/* 헤드라인 */}
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-6">
           <motion.span
             variants={item}
-            className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)"
-          >
+            className="text-xs font-semibold tracking-widest uppercase pl-3.5 pr-3 py-1 rounded-full text-(--color-primary) border-1 border-(--color-primary)">
             Reviews
           </motion.span>
           <motion.h2
