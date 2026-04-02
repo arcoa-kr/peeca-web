@@ -12,6 +12,7 @@ export default function Navbar() {
   const links = [
     { label: 'Problems', href: '#problem' },
     { label: 'How it works', href: '#how-it-works' },
+    { label: 'Example', href: '#example' },
     { label: 'FAQ', href: '#faq' },
   ]
 
@@ -19,30 +20,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 모바일 헤더 */}
-      <motion.header
-        initial={{ opacity: 0, y: -16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
-        className="md:hidden fixed top-0 left-0 right-0 z-50
-          bg-(--color-primary)/26 backdrop-blur-md border-b border-white/20"
-      >
-        <div className="flex items-center justify-between h-14 px-3">
-          <a href="#">
-            <img src="/assets/peeca.png" alt="peeca logo" className="h-9" />
-          </a>
-          <button
-            onClick={() => setOpen(!open)}
-            className="flex flex-col gap-[6px] p-2"
-            aria-label="menu"
-          >
-            <span className={`block w-6 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? 'rotate-45 translate-y-[8px] bg-(--color-white)' : ''}`} />
-            <span className={`block w-6 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
-            <span className={`block w-6 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? '-rotate-45 -translate-y-[8px] bg-(--color-white)' : ''}`} />
-          </button>
-        </div>
-      </motion.header>
-
       {/* PC 헤더 */}
       <motion.header
         initial={{ opacity: 0, y: -16 }}
@@ -59,8 +36,8 @@ export default function Navbar() {
             border-b border-(--color-line)/60
             shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
           >
-            <div className="flex items-center gap-5
-              bg-white/88 rounded-full pl-7 pr-3 py-2"
+            <div className="flex items-center gap-5.5
+              bg-white/88 rounded-full pl-7 pr-3 py-1.5"
             >
               {links.map((l) => (
                 <a
@@ -73,11 +50,37 @@ export default function Navbar() {
               ))}
               <a
                 href="#cta"
-                className="text-sm font-medium px-4 py-1 rounded-full bg-(--color-primary) text-white hover:opacity-90 transition-opacity"
+                className="text-sm font-medium px-4 py-1.5 rounded-full bg-(--color-primary) text-white hover:opacity-90 transition-opacity"
               >
                 Download
               </a>
             </div>
+          </div>
+        </div>
+      </motion.header>
+
+      {/* 모바일 헤더 */}
+      <motion.header
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+        className="md:hidden fixed top-0 left-0 right-0 z-50">
+        <div className="flex items-center justify-between h-14 px-1.5 pt-1">
+          <div className="bg-(--color-primary)/60 backdrop-blur-md border border-white/30 rounded-full px-1 py-1">
+            <a href="#">
+              <img src="/assets/peeca.png" alt="peeca logo" className="h-9" />
+            </a>
+          </div>
+          <div className="bg-(--color-primary)/60 backdrop-blur-md border border-white/30 rounded-full px-1 py-1">
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex flex-col gap-[6px] p-2"
+            aria-label="menu"
+          >
+            <span className={`block w-5 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? 'rotate-45 translate-y-[8px] bg-(--color-white)' : ''}`} />
+            <span className={`block w-5 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
+            <span className={`block w-5 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? '-rotate-45 -translate-y-[8px] bg-(--color-white)' : ''}`} />
+          </button>
           </div>
         </div>
       </motion.header>
@@ -91,7 +94,7 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-(--color-primary)/88 backdrop-blur-xl
-              flex flex-col items-center justify-center gap-6
+              flex flex-col items-center justify-center gap-8
               px-8 py-16
               md:hidden"
           >

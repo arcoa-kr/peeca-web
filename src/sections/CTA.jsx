@@ -55,14 +55,14 @@ export default function CTA() {
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-3">
           <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
-            <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
+            <img src="/assets/PlayStore.png" alt="Google Play" className="h-10" />
           </a>
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
-            <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
+            <img src="/assets/AppStore.png" alt="App Store" className="h-10" />
           </a>
           {/*
           <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
+            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-10" />
           </a>
           */}
         </motion.div>

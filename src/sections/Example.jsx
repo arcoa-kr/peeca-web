@@ -88,7 +88,7 @@ export default function Example() {
       >
         {/* 헤드라인 */}
         <div className="flex flex-col items-center gap-4">
-          <span className="text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-(--color-line) text-(--color-primary)">
+          <span className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)">
             Example
           </span>
           <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold tracking-tight text-(--color-text-1)">

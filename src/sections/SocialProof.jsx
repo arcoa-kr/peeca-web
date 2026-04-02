@@ -44,7 +44,7 @@ export default function SocialProof() {
         <div className="flex flex-col items-center gap-4">
           <motion.span
             variants={item}
-            className="text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-(--color-line) text-(--color-primary)"
+            className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)"
           >
             Reviews
           </motion.span>

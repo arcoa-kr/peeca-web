@@ -40,26 +40,26 @@ export default function CTAFinal() {
           variants={item}
           className="text-[2rem] sm:text-[2.75rem] font-bold leading-[1.2] tracking-tight text-(--color-text-1)"
         >
-          지금 결제할 카드,
+          지금 결제할 카드 검색
           <br />
           <span
             className="text-transparent bg-clip-text"
             style={{ backgroundImage: 'linear-gradient(135deg, #553FF3 0%, #AA9FF9 100%)' }}
           >
-            바로 찾아줄게요.
+            peeca
           </span>
         </motion.h2>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-3">
          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
-            <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
+            <img src="/assets/PlayStore.png" alt="Google Play" className="h-10" />
           </a>
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
-            <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
+            <img src="/assets/AppStore.png" alt="App Store" className="h-10" />
           </a>
           {/*
           <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
+            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-10" />
           </a>
           */}
         </motion.div>

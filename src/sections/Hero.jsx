@@ -25,8 +25,8 @@ export default function Hero() {
 
   return (
     <>
-      {/* ═══════════ PC (768px 이상) ═══════════ */}
-      <section className="hidden md:block relative w-full h-screen overflow-hidden bg-white pt-16">
+      {/* ═══════════ PC (1126px 이상) ═══════════ */}
+      <section className="hidden lg:block relative w-full h-screen overflow-hidden bg-white pt-16">
         {/* ① 배경 */}
         <div className="absolute inset-0 pointer-events-none opacity-88">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
@@ -91,7 +91,7 @@ export default function Hero() {
 
           {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
           <div
-            className="absolute left-[3%] xl:left-[5%] 2xl:left-[10%] top-[58%]"
+            className="absolute left-[5%] xl:left-[10%] 2xl:left-[15.5%] top-[56.3%]"
             style={{
               transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
@@ -119,19 +119,19 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ═══════════ 모바일 (768px 미만) ═══════════ */}
-      <section className="md:hidden relative w-full overflow-hidden bg-white pt-16"
+      {/* ═══════════ 모바일 (1125px 미만) ═══════════ */}
+      <section className="lg:hidden relative w-full overflow-hidden bg-white pt-6"
         style={{ minHeight: '100dvh' }}
       >
         {/* 배경 */}
-        <div className="absolute inset-0 pointer-events-none opacity-88">
+        <div className="absolute inset-0 pointer-events-none opacity-80">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/assets/peeca_bg.mp4" type="video/mp4" />
           </video>
         </div>
 
         {/* 콘텐츠 — 세로 중앙 정렬 */}
-        <div className="relative flex flex-col items-center justify-center px-6 py-12"
+        <div className="relative flex flex-col items-center justify-center px-3 pt-0 py-10"
           style={{ minHeight: '100dvh' }}
         >
           {/* 폰 목업 */}
@@ -141,20 +141,20 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             src="/assets/peeca_on.png"
             alt="peeca 앱 미리보기"
-            className="w-[95%] max-w-[360px] object-contain mb-8"
+            className="w-[95%] max-w-[520px] object-contain mb-8"
           />
 
           {/* 헤드라인 */}
           <motion.h1
             {...fadeIn(0.3)}
-            className="text-center text-[1.8rem] font-semibold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
+            className="text-center text-[2rem] font-semibold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
           >
             결제 전 5초 검색<br />
             peeca
           </motion.h1>
           <motion.p
             {...fadeIn(0.4)}
-            className="text-center text-lg leading-relaxed mb-6 text-(--color-text-1) font-medium"
+            className="text-center text-base leading-relaxed mb-6 text-(--color-text-1) font-medium"
           >
             지금 가장 유리한 내 카드를 찾아줘요!
           </motion.p>

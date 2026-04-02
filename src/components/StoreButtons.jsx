@@ -11,27 +11,28 @@ export default function StoreButtons({ compact = false }) {
           href={STORE_LINKS.google}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-black/80 shadow-sm">
-          <img src="/assets/icon-google.png" alt="Google Play" className="w-10" />
+          className="flex items-center justify-center w-11.5 h-11.5 rounded-full border border-white/70 bg-black/80 shadow-sm"
+          >
+          <img src="/assets/icon-google.png" alt="Google Play" className="w-9" />
         </a>
         <a
           href={STORE_LINKS.apple}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-black/80 shadow-sm"
+          className="flex items-center justify-center w-11.5 h-11.5 rounded-full border border-white/70 bg-black/80 shadow-sm"
         >
-          <img src="/assets/icon-apple.png" alt="App Store" className="w-10" />
+          <img src="/assets/icon-apple.png" alt="App Store" className="w-9.5" />
         </a>
-      {/* 토스 
+
         <a
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-black/80 shadow-sm"
+          className="flex items-center justify-center w-11.5 h-11.5 rounded-full border border-white/70 bg-black/80 shadow-sm"
         >
-          <img src="/assets/icon-toss.png" alt="토스" className="w-11 h-11" />
+          <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9.5" />
         </a>
-      */}
+
       </div>
     )
   }
@@ -39,16 +40,16 @@ export default function StoreButtons({ compact = false }) {
   return (
     <div className="flex flex-wrap gap-3 items-center">
       <a href={STORE_LINKS.google} target="_blank" rel="noopener noreferrer">
-        <img src="/assets/PlayStore.png" alt="Google Play" className="h-10" />
+        <img src="/assets/PlayStore.png" alt="Google Play" className="h-9.5" />
       </a>
       <a href={STORE_LINKS.apple} target="_blank" rel="noopener noreferrer">
-        <img src="/assets/AppStore.png" alt="App Store" className="h-10" />
+        <img src="/assets/AppStore.png" alt="App Store" className="h-9.5" />
       </a>
-      {/* 토스 
+
       <a href="#" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/Toss.png" alt="토스 미니앱" className="h-10" />
+        <img src="/assets/Toss.png" alt="토스 미니앱" className="h-9.5" />
       </a>
-      */}
+
     </div>
   )
 }

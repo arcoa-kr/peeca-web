@@ -54,7 +54,7 @@ export default function HowItWorks() {
         <div className="flex flex-col items-center gap-4">
           <motion.span
             variants={item}
-            className="text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-(--color-line) text-(--color-primary)"
+            className="text-xs font-semibold tracking-widest uppercase pl-4.5 pr-4 py-1.5 rounded-full bg-(--color-alt) text-(--color-primary) border border-(--color-primary-light)"
           >
             How it works
           </motion.span>
@@ -67,7 +67,7 @@ export default function HowItWorks() {
           </motion.h2>
 
           <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-2) leading-relaxed">
-            결제 상황만 알려주면, 나머지는 peeca가 계산해요.
+            결제 상황만 알려주면 ─ peeca가 계산해요.
           </motion.p>
         </div>
 
