@@ -9,7 +9,7 @@ const POINTS = [
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
     title: '혜택을 다 외울 수 없다.',
-    text: '모든 카드의 혜택을 기억하는 건 힘들어요.',
+    text: '카드의 모든 혜택을 기억하는 건 힘들어요.',
   },
   {
     icon: Timer,

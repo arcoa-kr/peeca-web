@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-(--color-line) bg-white pt-8 pb-10 px-5 sm:px-10 sm:pt-12 sm:pb-18">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-12">
 
         {/* 로고 + 사업자 정보 */}
         <div className="flex flex-col order-2 md:order-1">

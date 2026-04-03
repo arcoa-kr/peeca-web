@@ -21,7 +21,7 @@ export default function CTA() {
       {/* 배경 */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(135deg, #3a28d4 0%, #553FF3 50%, #7c6af5 100%)' }}
+        style={{ backgroundImage: 'url(/assets/bg-peeca.jpg)', backgroundSize: 'cover', backgroundPosition: 'left center' }}
       />
       {/* 블롭 */}
       <div
@@ -40,29 +40,30 @@ export default function CTA() {
         variants={container}
         initial="hidden"
         animate={inView ? 'show' : 'hidden'}
-        className="relative z-10 max-w-2xl mx-auto flex flex-col items-center text-center gap-7"
+        className="relative z-10 max-w-2xl mx-auto flex flex-col items-center text-center gap-10"
       >
         <motion.h2
           variants={item}
-          className="text-[2rem] sm:text-[2.75rem] font-bold leading-[1.2] tracking-tight text-white"
+          className="text-[1.75rem] sm:text-[2.25rem] font-semibold leading-[1.5] tracking-tight text-white"
         >
-          다음 결제부터, peeca ✦
+          다음 결제부터
+          <p className="text-3xl font-normal">peeca<br />✦</p>
         </motion.h2>
 
-        <motion.p variants={item} className="text-base sm:text-lg text-white/70">
-          무료 · 복잡한 연동 없음 · 바로 확인
+        <motion.p variants={item} className="pb-4">
+        <img src="/assets/card.png" alt="peeca card" className="h-30" />
         </motion.p>
 
-        <motion.div variants={item} className="flex flex-wrap justify-center gap-3">
+        <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
           <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
-            <img src="/assets/PlayStore.png" alt="Google Play" className="h-10" />
+            <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
           </a>
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
-            <img src="/assets/AppStore.png" alt="App Store" className="h-10" />
+            <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
           </a>
-          {/*
+          {/*}
           <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-10" />
+            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
           </a>
           */}
         </motion.div>

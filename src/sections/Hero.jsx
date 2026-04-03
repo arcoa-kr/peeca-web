@@ -84,14 +84,14 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                 src="/assets/peeca_on.png"
                 alt="peeca 앱 미리보기"
-                className="w-[85vw] max-w-[640px] object-contain"
+                className="w-[85vw] max-w-[630px] object-contain"
               />
             </div>
           </div>
 
           {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
           <div
-            className="absolute left-[5%] xl:left-[10%] 2xl:left-[15%] top-[55.5%]"
+            className="absolute left-[6%] xl:left-[10%] 2xl:left-[15%] top-[55.5%]"
             style={{
               transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
@@ -131,7 +131,7 @@ export default function Hero() {
         </div>
 
         {/* 콘텐츠 — 세로 중앙 정렬 */}
-        <div className="relative flex flex-col items-center justify-center px-3 pt-0 py-10"
+        <div className="relative flex flex-col items-center justify-center px-3 pb-3"
           style={{ minHeight: '100dvh' }}
         >
           {/* 폰 목업 */}

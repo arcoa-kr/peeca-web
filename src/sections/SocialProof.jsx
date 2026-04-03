@@ -5,20 +5,20 @@ import { Star } from 'lucide-react'
 
 const REVIEWS = [
   {
-    headline: '그 카드가 제일 손해였어요.',
-    text: '카드가 5장인데 항상 같은 카드만 쓰고 있었어요. peeca로 비교해보니 제일 자주 쓰던 카드가 혜택이 가장 적었어요.',
+    headline: '그 카드가 제일 손해',
+    text: '카드가 5장인데 항상 같은 카드만 썼어요.<br />peeca로 찾아보니 제일 자주 쓰던 카드가 할인율만 높고 혜택이 가장 적다는 것을 알았어요.',
     author: '30대 직장인',
     role: '카드 5장 보유',
   },
   {
-    headline: '결제 전에 바로 볼 수 있어 편해요.',
-    text: '카드 앱마다 들어가서 혜택 확인하는 게 너무 번거로웠는데, 상황만 고르면 바로 비교되니까 진짜 쉽고 편해요.',
+    headline: '결제 전 쉬운 검색',
+    text: '카드사마다 혜택 정보를 찾아서 일일이 비교하고 계산해야 했는데, peeca는 상황만 고르면 바로 비교되니까 진짜 쉽고 편해요.',
     author: '20대 대학생',
     role: '카드 2장 보유',
   },
   {
-    headline: '진짜 가볍고 딱 필요한 것만 있어요.',
-    text: '금융 앱인 줄 알고 설치하기 싫었는데, 막상 써보니까 연동도 없고 카드 이름만 넣으면 끝이라 부담이 없어요.',
+    headline: '딱 필요한 것만 가볍게',
+    text: '금융 앱인 줄 알고 설치를 망설였어요. <br />그런데 진짜 인증이나 연동도 없고 카드 이름으로 끝이라 정말 가볍고 부담 없어요.',
     author: '30대 프리랜서',
     role: '카드 3장 보유',
   },
@@ -58,7 +58,7 @@ export default function SocialProof() {
             variants={item}
             className="text-[1.75rem] sm:text-[2.25rem] font-bold tracking-tight text-(--color-text-1)"
           >
-            사람들의 이야기
+            이렇게 도움이 되었어요
           </motion.h2>
         </div>
 
@@ -93,16 +93,18 @@ export default function SocialProof() {
                 </p>
 
                 {/* 상세 설명 */}
-                <p className="text-base text-(--color-text-2) leading-relaxed px-1.5">
-                  {review.text}
-                </p>
+                <p 
+                  className="text-base text-(--color-text-2) leading-relaxed pb-5"
+                  dangerouslySetInnerHTML={{ __html: review.text }}
+                />
               </div>
 
-              {/* 하단: 작성자 */}
+              {/* 하단
               <div className="flex flex-col gap-0.5 text-left px-1 pt-1.5">
                 <span className="text-base font-semibold text-(--color-text-1)">{review.author}</span>
                 <span className="text-sm text-(--color-text-3)">{review.role}</span>
               </div>
+              */}
             </motion.div>
           ))}
         </div>
