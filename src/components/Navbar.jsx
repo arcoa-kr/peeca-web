@@ -25,7 +25,7 @@ export default function Navbar() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: 'easeOut' }}
-        className="hidden md:block fixed top-3.5 left-1 right-3 z-50"
+        className="hidden md:block fixed top-3 left-0 right-1.5 z-50"
       >
         <div className="mx-auto flex items-center justify-between h-16 px-5">
           <a href="#">
@@ -64,7 +64,7 @@ export default function Navbar() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: 'easeOut' }}
-        className="md:hidden fixed top-0 left-0 right-0 z-50">
+        className="md:hidden fixed top-1 left-1 right-1 z-50">
         <div className="flex items-center justify-between h-14 px-1.5 pt-1">
           <div className="bg-(--color-primary)/60 backdrop-blur-md border border-white/30 rounded-full px-1 py-1">
             <a href="#">
