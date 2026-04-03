@@ -1,19 +1,26 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import SectionWrapper from '../components/SectionWrapper'
+import { Star } from 'lucide-react'
 
 const REVIEWS = [
   {
-    text: '카드가 4장인데 항상 같은 카드만 쓰고 있었어요. 확인해보니 그 카드가 제일 손해였더라고요.',
+    headline: '그 카드가 제일 손해였어요.',
+    text: '카드가 5장인데 항상 같은 카드만 쓰고 있었어요. peeca로 비교해보니 제일 자주 쓰던 카드가 혜택이 가장 적었어요.',
     author: '30대 직장인',
+    role: '카드 5장 보유',
   },
   {
-    text: '카드 앱마다 들어가서 혜택 탭 찾는 게 너무 귀찮았는데, 결제 전에 한 번에 볼 수 있어서 편해요.',
-    author: '20대 대학원생',
+    headline: '결제 전에 바로 볼 수 있어 편해요.',
+    text: '카드 앱마다 들어가서 혜택 확인하는 게 너무 번거로웠는데, 상황만 고르면 바로 비교되니까 진짜 쉽고 편해요.',
+    author: '20대 대학생',
+    role: '카드 2장 보유',
   },
   {
-    text: '금융 앱인 줄 알고 설치하기 싫었는데, 막상 써보니까 진짜 가볍고 딱 필요한 것만 있어요.',
+    headline: '진짜 가볍고 딱 필요한 것만 있어요.',
+    text: '금융 앱인 줄 알고 설치하기 싫었는데, 막상 써보니까 연동도 없고 카드 이름만 넣으면 끝이라 부담이 없어요.',
     author: '30대 프리랜서',
+    role: '카드 3장 보유',
   },
 ]
 
@@ -51,7 +58,7 @@ export default function SocialProof() {
             variants={item}
             className="text-[1.75rem] sm:text-[2.25rem] font-bold tracking-tight text-(--color-text-1)"
           >
-            써본 사람들의 이야기
+            사람들의 이야기
           </motion.h2>
         </div>
 
@@ -61,27 +68,45 @@ export default function SocialProof() {
             <motion.div
               key={i}
               variants={item}
-              className="flex flex-col justify-between gap-6 bg-(--color-bg) rounded-2xl p-6 border border-(--color-line)"
+              className="flex flex-col justify-between gap-6 rounded-2xl p-7 bg-(--color-bg)"
             >
-              {/* 별점 */}
-              <div className="flex flex-col gap-4">
-                <span className="flex gap-0.5 text-yellow-400 text-base">{'★★★★★'}</span>
-                <p className="text-sm sm:text-base text-(--color-text-1) leading-relaxed">
-                  "{review.text}"
+              {/* 상단: 아이콘 + 별점 */}
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center justify-between">
+                  <div
+                    className="w-6 h-6 flex items-center justify-center"
+                  >
+                    <img src="/assets/peeca_icon.png" alt="" className="w-6 h-6" />
+                  </div>
+                  <span className="flex gap-0.5 text-amber-400 text-lg pb-0.5">
+                    <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" strokeWidth={1.5} />
+                    ))}
+                    </div>
+                  </span>
+                </div>
+
+                {/* 헤드라인 후기 */}
+                <p className="text-xl font-bold text-(--color-text-1) leading-snug pt-6 py-3">
+                  {review.headline}
+                </p>
+
+                {/* 상세 설명 */}
+                <p className="text-base text-(--color-text-2) leading-relaxed px-1.5">
+                  {review.text}
                 </p>
               </div>
 
-              {/* 작성자 */}
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-8 h-8 rounded-full flex-shrink-0"
-                  style={{ background: 'linear-gradient(135deg, #553FF3, #AA9FF9)' }}
-                />
-                <span className="text-sm font-medium text-(--color-text-2)">{review.author}</span>
+              {/* 하단: 작성자 */}
+              <div className="flex flex-col gap-0.5 text-left px-1 pt-1.5">
+                <span className="text-base font-semibold text-(--color-text-1)">{review.author}</span>
+                <span className="text-sm text-(--color-text-3)">{review.role}</span>
               </div>
             </motion.div>
           ))}
         </div>
+
       </motion.div>
     </SectionWrapper>
   )
