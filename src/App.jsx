@@ -20,7 +20,6 @@ function App() {
       <SocialProof />
       <CTA />
       <FAQ />
-      <CTAFinal />
       <Footer />
     </div>
   )

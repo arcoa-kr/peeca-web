@@ -91,7 +91,7 @@ export default function Hero() {
 
           {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
           <div
-            className="absolute left-[5%] xl:left-[10%] 2xl:left-[15.5%] top-[56.3%]"
+            className="absolute left-[5%] xl:left-[10%] 2xl:left-[15%] top-[55.5%]"
             style={{
               transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',

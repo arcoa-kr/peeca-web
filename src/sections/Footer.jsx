@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-(--color-line) bg-white pt-8 pb-10 px-5 sm:px-10 sm:pt-10 sm:pb-15">
+    <footer className="border-t border-(--color-line) bg-white pt-8 pb-10 px-5 sm:px-10 sm:pt-12 sm:pb-18">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-12">
 
         {/* 로고 + 사업자 정보 */}
@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
 
         {/* 링크 그룹 */}
-        <div className="flex gap-16 order-1 md:order-2">
+        <div className="flex gap-10 sm:gap-15 order-1 md:order-2">
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-semibold text-(--color-text-1) mb-1">Explore</h4>
             <a href="#problem" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Problems</a>
@@ -30,7 +30,38 @@ export default function Footer() {
             <a href="https://arcoa-kr.notion.site/peeca-Terms-of-Service-5f8b0d619bef8390ba548133160f417f" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-1) transition-colors">Terms of Service</a>
             <a href="https://arcoa-kr.notion.site/peeca-Privacy-Policy-cd5b0d619bef8201815d0197eaddcc02" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-2) hover:text-(--color-text-1) transition-colors font-medium">Privacy Policy</a>
           </div>
-        </div>
+          <div id="download" className="flex flex-col gap-3">
+              <h4 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h4>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
+                >
+                  <img src="/assets/icon-google.png" alt="Google Play" className="w-9 h-9" />
+                </a>
+                <a
+                  href="https://apps.apple.com/us/app/peeca/id6758100118"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
+                >
+                  <img src="/assets/icon-apple.png" alt="App Store" className="w-9 h-9" />
+                </a>
+                {/* 토스 미니앱
+                <a href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
+                >
+                  <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9 h-9" />
+                </a>
+                */}
+               </div>
+            </div>
+          </div>
+
 
       </div>
     </footer>
