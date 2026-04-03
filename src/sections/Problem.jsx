@@ -8,21 +8,21 @@ const POINTS = [
     icon: ListChecks,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '혜택을 다 외울 수 없다',
+    title: '혜택을 다 외울 수 없다.',
     text: '모든 카드의 혜택을 기억하는 건 힘들어요.',
   },
   {
     icon: Timer,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '계산대 앞은 너무 짧다',
+    title: '계산대 앞은 너무 짧다.',
     text: '카드 앱 열고 혜택 찾을 시간이 없어요.',
   },
   {
     icon: CreditCard,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '왜 만든 카드인지 모르겠다',
+    title: '왜 만든 카드인지 모르겠다.',
     text: '분명 필요했을 텐데, 연회비만 나가고 있어요.',
   },
 ]
@@ -71,14 +71,14 @@ export default function Problem() {
             return (
               <div
                 key={point.title}
-                className="flex flex-col items-start gap-4 bg-white rounded-2xl p-6 text-left border border-(--color-line)"
+                className="flex flex-col items-start gap-4 bg-white rounded-2xl px-6 pt-6 pb-8 text-left border border-(--color-line)"
               >
                 <div className={`w-15 h-15 rounded-full ${point.color} flex items-center justify-center`}>
-                  <Icon className={`w-8 h-8 ${point.iconColor}`} strokeWidth={1.5} />
+                  <Icon className={`w-7 h-7 ${point.iconColor}`} strokeWidth={1.5} />
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <h3 className="text-lg font-semibold text-(--color-text-1)">{point.title}</h3>
-                  <p className="text-base text-(--color-text-2) leading-relaxed">
+                  <p className="text-base text-(--color-text-2) leading-relaxed pt-1">
                     {point.text}
                   </p>
                 </div>
