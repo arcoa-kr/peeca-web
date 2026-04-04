@@ -11,7 +11,7 @@ export default function Footer() {
             <p>대표 : 박지안</p>
             <p>문의 : help@arcoa.kr</p>
           </div>
-          <p className="pt-7 text-sm text-(--color-text-3)">© 2026 peeca by <a href="https://arcoa.kr"><span className="font-medium text-(--color-text-2)">ARCOA</span></a></p>
+          <p className="pt-7 text-sm text-(--color-text-3)">© 2026 peeca by <a href="https://arcoa.kr" target="_blank" rel="noopener noreferrer"><span className="font-medium text-(--color-text-2)">ARCOA</span></a></p>
         </div>
 
         {/* 링크 그룹 */}

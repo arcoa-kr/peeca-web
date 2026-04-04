@@ -35,7 +35,7 @@ export default function CTA() {
           className="text-[2rem] sm:text-[2.5rem] font-semibold leading-[1.6] tracking-tight text-white"
         >
           다음 결제부터
-          <p className="text-3xl font-normal">peeca<br />✦</p>
+          <span className="text-3xl font-normal block">peeca<br />✦</span>
         </motion.h2>
 
         <motion.p variants={item} className="pb-4">
@@ -43,10 +43,10 @@ export default function CTA() {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
+          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank" rel="noopener noreferrer">
             <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
           </a>
-          <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
+          <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
           </a>
           {/*}

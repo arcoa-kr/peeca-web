@@ -76,6 +76,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             className="flex flex-col gap-[6px] p-2"
             aria-label="menu"
+            aria-expanded={open} 
           >
             <span className={`block w-5 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? 'rotate-45 translate-y-[8px] bg-(--color-white)' : ''}`} />
             <span className={`block w-5 h-[2px] bg-(--color-white) transition-all duration-300 ${open ? 'opacity-0' : ''}`} />

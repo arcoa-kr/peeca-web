@@ -80,8 +80,8 @@ export default function SocialProof() {
                   </div>
                   <span className="flex text-amber-400 text-lg pb-0.5">
                     <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4.5 h-4.5 text-amber-400 fill-amber-400" strokeWidth={1.5} />
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="w-4.5 h-4.5 text-amber-400 fill-amber-400" strokeWidth={1.5} />
                     ))}
                     </div>
                   </span>
