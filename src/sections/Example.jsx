@@ -30,7 +30,7 @@ export default function Example() {
         variants={container}
         initial="hidden"
         animate={inView ? 'show' : 'hidden'}
-        className="flex flex-col items-center gap-10 w-full"
+        className="flex flex-col items-center gap-12 w-full"
       >
         {/* 헤드라인 */}
         <div className="flex flex-col items-center gap-6">

@@ -74,7 +74,7 @@ export default function FAQ() {
         initial={{ opacity: 0, y: 24 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="flex flex-col items-center gap-10 w-full"
+        className="flex flex-col items-center gap-12 w-full"
       >
         {/* 헤드라인 */}
         <div className="flex flex-col items-center gap-6">

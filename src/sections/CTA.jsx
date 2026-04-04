@@ -23,18 +23,6 @@ export default function CTA() {
         className="absolute inset-0"
         style={{ backgroundImage: 'url(/assets/bg-peeca.jpg)', backgroundSize: 'cover', backgroundPosition: 'left center' }}
       />
-      {/* 블롭 */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-20 -right-20 w-80 h-80 rounded-full opacity-30"
-        style={{ background: 'radial-gradient(circle, #B1FFF3 0%, transparent 70%)', filter: 'blur(60px)' }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-16 -left-16 w-72 h-72 rounded-full opacity-20"
-        style={{ background: 'radial-gradient(circle, #AA9FF9 0%, transparent 70%)', filter: 'blur(60px)' }}
-      />
-
       <motion.div
         ref={ref}
         variants={container}
@@ -51,7 +39,7 @@ export default function CTA() {
         </motion.h2>
 
         <motion.p variants={item} className="pb-4">
-        <img src="/assets/card.png" alt="peeca card" className="h-30" />
+        <img src="/assets/card.png" alt="peeca card" className="h-33" />
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
