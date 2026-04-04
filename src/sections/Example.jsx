@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import SectionWrapper from '../components/SectionWrapper'
 
 const CASES = [
-  { label: '편의점', desc: '도시락 8,900원', img: '/assets/mockup/EX-convenience.png' },
-  { label: '마일리지', desc: '국내 이용 50,000원', img: '/assets/mockup/EX-mile.png' },
-  { label: '앱스토어', desc: '인앱 결제 33,000원', img: '/assets/mockup/EX-app.png' },
-  { label: 'KTX', desc: '서울-부산 119,600원', img: '/assets/mockup/EX-ktx.png' },
+  { label: '편의점', desc: '도시락 8,900원', img: '/assets/mockup/EX-convenience.webp' },
+  { label: '마일리지', desc: '국내 이용 50,000원', img: '/assets/mockup/EX-mile.webp' },
+  { label: '앱스토어', desc: '인앱 결제 33,000원', img: '/assets/mockup/EX-app.webp' },
+  { label: 'KTX', desc: '서울-부산 119,600원', img: '/assets/mockup/EX-ktx.webp' },
 ]
 
 const container = {
@@ -67,7 +67,7 @@ export default function Example() {
                   style={{ height: '388px', maxWidth: '280px', margin: '0 auto' }}>
                 <img 
                   src={c.img} 
-                  alt={`${c.label} 결과 화면`}
+                  alt={`${c.label} 혜택 검색의 결과 화면`}
                   className="w-full h-auto object-cover object-top" 
                 />
               </div>

@@ -17,7 +17,7 @@ export default function Footer() {
         {/* 링크 그룹 */}
         <div className="flex gap-10 sm:gap-15 order-1 md:order-2">
           <div className="flex flex-col gap-4">
-            <h4 className="text-sm font-semibold text-(--color-text-1) mb-1">Explore</h4>
+            <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Explore</h3>
             <a href="#problem" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Problems</a>
             <a href="#how-it-works" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">How it works</a>
             <a href="#example" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Example</a>
@@ -25,13 +25,13 @@ export default function Footer() {
             <a href="#cta" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Download</a>
           </div>
           <div className="flex flex-col gap-4">
-          <h4 className="text-sm font-semibold text-(--color-text-1) mb-1">Support</h4>
+          <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Support</h3>
           <a href="https://arcoa-kr.notion.site/330b0d619bef80a6b5d1e69c7b600865" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Contact</a>
             <a href="https://arcoa-kr.notion.site/peeca-Terms-of-Service-5f8b0d619bef8390ba548133160f417f" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-1) transition-colors">Terms of Service</a>
             <a href="https://arcoa-kr.notion.site/peeca-Privacy-Policy-cd5b0d619bef8201815d0197eaddcc02" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-2) hover:text-(--color-text-1) transition-colors font-medium">Privacy Policy</a>
           </div>
           <div id="download" className="flex flex-col gap-3">
-              <h4 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h4>
+              <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h3>
               <div className="flex flex-col gap-3">
                 <a
                   href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca"

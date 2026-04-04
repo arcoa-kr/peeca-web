@@ -21,7 +21,7 @@ export default function CTA() {
       {/* 배경 */}
       <div
         className="absolute inset-0"
-        style={{ backgroundImage: 'url(/assets/bg-peeca.jpg)', backgroundSize: 'cover', backgroundPosition: 'left center' }}
+        style={{ backgroundImage: 'url(/assets/bg-peeca.webp)', backgroundSize: 'cover', backgroundPosition: 'left center' }}
       />
       <motion.div
         ref={ref}
@@ -49,7 +49,7 @@ export default function CTA() {
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
           </a>
-          {/*}
+          {/* TODO
           <a href="#">
             <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
           </a>

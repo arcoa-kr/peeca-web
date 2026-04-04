@@ -12,16 +12,18 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Problem />
-      <HowItWorks />
-      <Example />
-      <SocialProof />
-      <CTA />
-      <FAQ />
+      <main>
+        <Hero />
+        <Problem />
+        <HowItWorks />
+        <Example />
+        <SocialProof />
+        <CTA />
+        <FAQ />
+      </main>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App
