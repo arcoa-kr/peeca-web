@@ -54,17 +54,17 @@ export default function Example() {
         </div>
 
         {/* 카드 그리드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {CASES.map((c, i) => (
-            <motion.div key={c.label} variants={item} className="flex flex-col gap-3">
+            <motion.div key={c.label} variants={item} className="flex flex-col gap-2">
               {/* 라벨 */}
               <div className="text-center">
-                <p className="text-lg font-semibold text-(--color-text-1)">{c.label}</p>
+                <p className="text-xl font-semibold text-(--color-text-1)">{c.label}</p>
                 <p className="text-base text-(--color-text-2) pb-1">{c.desc}</p>
               </div>
               {/* 이미지 */}
               <div className="relative rounded-t-3xl overflow-hidden"
-                  style={{ height: '388px', maxWidth: '266px', margin: '0 auto' }}>
+                  style={{ height: '388px', maxWidth: '280px', margin: '0 auto' }}>
                 <img 
                   src={c.img} 
                   alt={`${c.label} 결과 화면`}

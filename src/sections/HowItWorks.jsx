@@ -17,7 +17,7 @@ const TABS = [
       {
         number: '2',
         title: '금액 입력',
-        desc: '얼마를 사용할 건지 입력해요.',
+        desc: '얼마를 사용할지 입력해요.',
         src: '/assets/mockup/HOME-amount.png',
         alt: '금액 입력 화면',
       },
@@ -152,7 +152,7 @@ export default function HowItWorks() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full grid grid-cols-1 sm:grid-cols-3 gap-6"
+            className="w-full grid grid-cols-1 sm:grid-cols-3 gap-0"
           >
             {current.steps.map((step) => (
               <div key={step.number} className="flex flex-col items-center gap-4">
@@ -163,7 +163,7 @@ export default function HowItWorks() {
                   >
                     {step.number}
                   </span>
-                  <span className="pr-4 text-lg font-semibold text-(--color-text-1)">{step.title}</span>
+                  <span className="pr-4 text-xl font-semibold text-(--color-text-1)">{step.title}</span>
                 </div>
                 
                 {/* 설명 */}

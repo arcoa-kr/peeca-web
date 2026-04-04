@@ -32,7 +32,8 @@ function FAQItem({ faq, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="text-lg font-semibold text-(--color-text-1)">{faq.q}</span>
+        <span className="font-semibold text-(--color-text-1)"
+        style={{ fontSize: '17px' }}>{faq.q}</span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}

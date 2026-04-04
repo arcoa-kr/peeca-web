@@ -44,7 +44,7 @@ export default function CTA() {
       >
         <motion.h2
           variants={item}
-          className="text-[1.75rem] sm:text-[2.25rem] font-semibold leading-[1.5] tracking-tight text-white"
+          className="text-[2rem] sm:text-[2.5rem] font-semibold leading-[1.6] tracking-tight text-white"
         >
           다음 결제부터
           <p className="text-3xl font-normal">peeca<br />✦</p>

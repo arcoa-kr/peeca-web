@@ -6,7 +6,7 @@ import { Star } from 'lucide-react'
 const REVIEWS = [
   {
     headline: '그 카드가 제일 손해',
-    text: '카드가 5장인데 항상 같은 카드만 썼어요.<br />peeca로 찾아보니 제일 자주 쓰던 카드가 할인율만 높고 혜택이 가장 적다는 것을 알았어요.',
+    text: '카드가 5장인데 늘 쓰던 카드만 썼어요.<br />peeca로 찾아보니, 제일 자주 쓴 카드가 할인율만 높고 혜택이 가장 적다는 것을 알았어요.',
     author: '30대 직장인',
     role: '카드 5장 보유',
   },
@@ -39,7 +39,7 @@ export default function SocialProof() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper id="reviews" bg="#ffffff" maxWidth="xl" center>
+    <SectionWrapper id="reviews" bg="#E2E6EC" maxWidth="xl" center>
       <motion.div
         ref={ref}
         variants={container}
@@ -68,27 +68,27 @@ export default function SocialProof() {
             <motion.div
               key={i}
               variants={item}
-              className="flex flex-col justify-between gap-6 rounded-2xl p-7 bg-(--color-bg)"
+              className="flex flex-col justify-between gap-6 rounded-3xl p-7 bg-white"
             >
               {/* 상단: 아이콘 + 별점 */}
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-6">
                 <div className="flex items-center justify-between">
                   <div
                     className="w-6 h-6 flex items-center justify-center"
                   >
-                    <img src="/assets/peeca_icon.png" alt="" className="w-6 h-6" />
+                    <img src="/assets/peeca_icon.png" alt="peeca logo" className="w-6 h-6" />
                   </div>
-                  <span className="flex gap-0.5 text-amber-400 text-lg pb-0.5">
+                  <span className="flex text-amber-400 text-lg pb-0.5">
                     <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" strokeWidth={1.5} />
+                      <Star key={i} className="w-4.5 h-4.5 text-amber-400 fill-amber-400" strokeWidth={1.5} />
                     ))}
                     </div>
                   </span>
                 </div>
 
                 {/* 헤드라인 후기 */}
-                <p className="text-xl font-bold text-(--color-text-1) leading-snug pt-6 py-3">
+                <p className="text-xl font-bold text-(--color-text-1) leading-snug pt-5 py-3">
                   {review.headline}
                 </p>
 

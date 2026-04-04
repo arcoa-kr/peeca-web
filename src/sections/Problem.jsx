@@ -54,13 +54,13 @@ export default function Problem() {
           </span>
         <motion.h2
           variants={item}
-          className="text-[1.75rem] sm:text-[2.25rem] font-bold leading-[1.3] tracking-tight text-(--color-text-1) max-w-2xl"
+          className="text-[1.75rem] sm:text-[2.25rem] font-bold leading-[1.35] tracking-tight text-(--color-text-1) max-w-2xl"
         >
-          카드가 여러 장인데,<br />같은 카드만 쓰고 있지 않나요?
+          카드 혜택<br />다 쓰고 있어요?
         </motion.h2>
 
         <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-1) leading-relaxed max-w-xl">
-          어떤 카드가 <b>어디서 얼마나 할인</b>되는지 다 외우긴 어렵죠.
+          어떤 카드가 <b>어디서 얼마나 혜택</b>이 있는지 다 외우긴 어렵죠.
           <br className="hidden sm:block" />
           결국 쓰던 카드만 쓰게 됩니다.
         </motion.p>
@@ -71,13 +71,13 @@ export default function Problem() {
             return (
               <div
                 key={point.title}
-                className="flex flex-col items-start gap-4 bg-white rounded-2xl px-6 pt-6 pb-8 text-left border border-(--color-line)"
+                className="flex flex-col items-start gap-8 bg-white rounded-3xl px-6 pt-6 pb-8 text-left border border-(--color-line)"
               >
                 <div className={`w-15 h-15 rounded-full ${point.color} flex items-center justify-center`}>
                   <Icon className={`w-7 h-7 ${point.iconColor}`} strokeWidth={1.5} />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <h3 className="text-lg font-semibold text-(--color-text-1)">{point.title}</h3>
+                  <h3 className="text-xl font-semibold text-(--color-text-1)">{point.title}</h3>
                   <p className="text-base text-(--color-text-2) leading-relaxed pt-1">
                     {point.text}
                   </p>
