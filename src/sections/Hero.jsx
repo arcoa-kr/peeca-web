@@ -84,7 +84,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                 src="/assets/peeca_app.webp"
                 alt="peeca 앱 미리보기"
-                className="w-[85vw] max-w-[630px] max-h-[631px] object-contain"
+                className="w-[85vw] max-w-[630px] max-h-[630px] object-contain"
               />
             </div>
           </div>
@@ -139,9 +139,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            src="/assets/peeca_on.webp"
+            src="/assets/peeca_app.webp"
             alt="peeca 앱 미리보기"
-            className="w-[95%] max-w-[520px] object-contain mb-8"
+            className="w-[95%] max-w-[520px] max-h-[520px] object-contain mb-8"
           />
 
           {/* 헤드라인 */}
