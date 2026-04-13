@@ -28,7 +28,7 @@ export default function Hero() {
       {/* ═══════════ PC (1126px 이상) ═══════════ */}
       <section className="hidden lg:block relative w-full h-screen overflow-hidden bg-white pt-16">
         {/* ① 배경 */}
-        <div className="absolute inset-0 pointer-events-none opacity-88" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="absolute inset-0 pointer-events-none opacity-88" style={{ backgroundColor: '#FEE2E5' }}>
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/assets/peeca_bg.mp4" type="video/mp4" />
           </video>

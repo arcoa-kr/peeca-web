@@ -56,7 +56,7 @@ export default function Problem() {
           variants={item}
           className="text-[1.75rem] sm:text-[2.25rem] font-bold leading-[1.35] tracking-tight text-(--color-text-1) max-w-2xl"
         >
-          카드 혜택<br />다 쓰고 있어요?
+          카드 혜택<br />다 쓰고 있나요?
         </motion.h2>
 
         <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-1) leading-relaxed max-w-xl">
