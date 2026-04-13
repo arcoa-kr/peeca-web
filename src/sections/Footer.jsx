@@ -49,20 +49,16 @@ export default function Footer() {
                 >
                   <img src="/assets/icon-apple.png" alt="App Store" className="w-9 h-9" />
                 </a>
-                {/* 토스 미니앱
-                <a href="#"
+                <a href="intoss://peeca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors block xl:hidden"
                 >
                   <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9 h-9" />
                 </a>
-                */}
                </div>
             </div>
           </div>
-
-
       </div>
     </footer>
   )

@@ -1,6 +1,7 @@
 const STORE_LINKS = {
   google: 'https://play.google.com/store/apps/details?id=kr.arcoa.peeca',
   apple: 'https://apps.apple.com/us/app/peeca/id6758100118',
+  toss: 'intoss://peeca',
 }
 
 export default function StoreButtons({ compact = false }) {
@@ -23,16 +24,14 @@ export default function StoreButtons({ compact = false }) {
         >
           <img src="/assets/icon-apple.png" alt="App Store" className="w-9.5" />
         </a>
-       {/* 토스 미니앱
         <a
-          href="#"
+          href={STORE_LINKS.toss}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-11.5 h-11.5 rounded-full border border-white/70 bg-black/80 shadow-sm hover:bg-(--color-primary) "
         >
-          <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9.5" />
+          <img src="/assets/icon-toss.png" alt="앱인토스 미니앱" className="w-9.5" />
         </a>
-      */}
       </div>
     )
   }

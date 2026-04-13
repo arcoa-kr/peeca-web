@@ -47,13 +47,11 @@ export default function CTA() {
             <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
           </a>
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/AppStore.png" alt="App Store" className="h-11" />
+            <img src="/assets/AppStore.png" alt="App Store" className="h-11 block" />
           </a>
-          {/* TODO
-          <a href="#">
-            <img src="/assets/Toss.png" alt="토스 미니앱" className="h-11" />
+          <a href="intoss://peeca">
+            <img src="/assets/Toss.png" alt="앱인토스 미니앱" className="h-11 block xl:hidden" />
           </a>
-          */}
         </motion.div>
       </motion.div>
     </section>
