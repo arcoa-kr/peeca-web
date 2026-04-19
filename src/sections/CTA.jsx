@@ -52,7 +52,12 @@ export default function CTA() {
           <a href="https://minion.toss.im/JSMQF2K7">
             <img src="/assets/Toss.png" alt="앱인토스 미니앱" className="h-11 block xl:hidden" />
           </a>
+          <div className="flex items-center justify-center mt-2.5 w-full text-(--color-line) text-base hidden lg:flex">
+            <img src="/assets/toss_w.png" alt="toss" className="h-4.5" />
+            <p className="ml-1"><b>미니앱</b>은 모바일에서 만나보세요.</p>
+          </div>
         </motion.div>
+
       </motion.div>
     </section>
   )

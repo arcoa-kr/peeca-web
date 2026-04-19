@@ -27,53 +27,54 @@ export default function Hero() {
     <>
       {/* ═══════════ PC (1126px 이상) ═══════════ */}
       <section className="hidden lg:block relative w-full h-screen overflow-hidden bg-white pt-16">
+
         {/* ① 배경 */}
-        <div className="absolute inset-0 pointer-events-none opacity-88" style={{ backgroundColor: '#FEE2E5' }}>
+        <div className="absolute inset-0 pointer-events-none opacity-88" style={{ backgroundColor: '#FFEFF1' }}>
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/assets/peeca_bg.mp4" type="video/mp4" />
           </video>
         </div>
 
-        {/* 컨테이너 */}
+        {/* ② 5sec peeca */}
+        <div
+          className="absolute top-1/2 pointer-events-none z-0"
+          style={{
+            left: 'calc(52.5% - 700px)',
+            transform: `translate(${offset.x * 32}px, calc(-38% + ${offset.y * 32}px))`,
+            transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
+          }}
+        >
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            src="/assets/peeca_txt.webp"
+            alt=""
+            aria-hidden
+            className="object-contain"
+          />
+        </div>
+
+        {/* ③④ 목업 + 카피 함께 */}
         <div
           ref={heroRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="relative mx-auto w-full h-full"
-          style={{ maxWidth: '1800px' }}
+          className="relative z-10 flex items-center justify-end h-full"
+          style={{ maxWidth: '1280px', margin: '0 auto' }}
         >
-          {/* ② 텍스트 배경 */}
+          {/* 목업 */}
           <div
-            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+            className="flex-shrink-0"
             style={{
-              transform: `translate(${offset.x * 32}px, ${offset.y * 32}px)`,
+              perspective: '600px',
+              transform: `translate(${offset.x * 56}px, ${offset.y * 56}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
             }}
           >
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.1 }}
-              src="/assets/peeca_txt.webp"
-              alt=""
-              aria-hidden
-              style={{ width: 'clamp(1400px, 80vw, 1600px)' }}
-              className="object-contain px-8"
-            />
-          </div>
-
-          {/* ③ 목업 */}
-          <div
-            className="absolute inset-0 flex items-center justify-center pointer-events-none"
-            style={{ perspective: '1000px' }}
-          >
             <div
               style={{
-                transform: `
-                  translate(${offset.x * 56}px, ${offset.y * 56}px)
-                  rotateY(${offset.x * 21}deg)
-                  rotateX(${offset.y * -21}deg)
-                `,
+                transform: `rotateY(${offset.x * 21}deg) rotateX(${offset.y * -21}deg)`,
                 transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
                 transformStyle: 'preserve-3d',
               }}
@@ -84,14 +85,14 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                 src="/assets/peeca_app.webp"
                 alt="peeca 앱 미리보기"
-                className="w-[85vw] max-w-[600px] max-h-[600px] object-contain"
+                className="max-w-[600px] max-h-[600px] object-contain"
               />
             </div>
           </div>
 
-          {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
+          {/* 카피 + CTA */}
           <div
-            className="absolute right-[6%] xl:right-[10%] 2xl:right-[15%] top-[45.5%]"
+            className="flex-shrink-0 text-(--color-text-1) pl-5 pr-15 mt-6"
             style={{
               transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
@@ -99,19 +100,19 @@ export default function Hero() {
           >
             <motion.h1
               {...fadeIn(0.3)}
-              className="text-left text-[1.8rem] sm:text-[2.5rem] font-semibold leading-[1.2] tracking-tight text-(--color-text-1)"
+              className="text-left text-[2.4rem] font-bold leading-[1.2] tracking-tight"
             >
-              결제 전 5초 검색<br />
-              peeca
+              여기<br />
+              내 카드로 할인 돼?
             </motion.h1>
-            <div className="mt-[28px]">
-              <motion.p
-                {...fadeIn(0.4)}
-                className="text-lg leading-relaxed mb-4 text-(--color-text-1) font-medium"
-              >
-                지금 가장 유리한 내 카드를 찾아줘요!
+            <div className="mt-5">
+              <motion.p {...fadeIn(0.4)} className="text-[25.5px] leading-relaxed font-bold">
+                내 카드 혜택, 5초면 확인
               </motion.p>
-              <motion.div {...fadeIn(0.5)}>
+              <motion.p {...fadeIn(0.5)} className="text-lg leading-relaxed mb-8 font-semibold">
+                지금 가장 유리한 내 카드를 찾아요.
+              </motion.p>
+              <motion.div {...fadeIn(0.8)}>
                 <StoreButtons />
               </motion.div>
             </div>
@@ -141,22 +142,22 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             src="/assets/peeca_app.webp"
             alt="peeca 앱 미리보기"
-            className="w-[95%] max-w-[520px] max-h-[520px] object-contain mb-8"
+            className="w-[93%] max-w-[510px] max-h-[510px] object-contain mb-8"
           />
 
           {/* 헤드라인 */}
           <motion.h1
             {...fadeIn(0.3)}
-            className="text-center text-[2rem] font-semibold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
+            className="text-center text-[2rem] font-bold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
           >
-            결제 전 5초 검색<br />
-            peeca
+            여기, 내 카드 할인 돼?
           </motion.h1>
           <motion.p
             {...fadeIn(0.4)}
             className="text-center text-base leading-relaxed mb-6 text-(--color-text-1) font-medium"
           >
-            지금 가장 유리한 내 카드를 찾아줘요!
+            <span className="text-2xl leading-relaxed font-bold">내 카드 혜택, 5초면 확인</span><br />
+            지금 가장 유리한 내 카드를 찾아요.
           </motion.p>
 
           {/* CTA */}
