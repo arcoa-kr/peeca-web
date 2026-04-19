@@ -58,7 +58,7 @@ export default function CTAFinal() {
             <img src="/assets/AppStore.png" alt="App Store" className="h-10" />
           </a>
           {/*
-          <a href="#">
+          <a href="https://minion.toss.im/JSMQF2K7">
             <img src="/assets/Toss.png" alt="토스 미니앱" className="h-10" />
           </a>
           */}
