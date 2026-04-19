@@ -49,7 +49,7 @@ export default function CTA() {
           <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11 block" />
           </a>
-          <a href="intoss://peeca">
+          <a href="https://minion.toss.im/JSMQF2K7">
             <img src="/assets/Toss.png" alt="앱인토스 미니앱" className="h-11 block xl:hidden" />
           </a>
         </motion.div>

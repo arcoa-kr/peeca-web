@@ -34,14 +34,6 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h3>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
-                >
-                  <img src="/assets/icon-google.png" alt="Google Play" className="w-9 h-9" />
-                </a>
-                <a
                   href="https://apps.apple.com/us/app/peeca/id6758100118"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -49,7 +41,15 @@ export default function Footer() {
                 >
                   <img src="/assets/icon-apple.png" alt="App Store" className="w-9 h-9" />
                 </a>
-                <a href="intoss://peeca"
+                <a
+                  href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
+                >
+                  <img src="/assets/icon-google.png" alt="Google Play" className="w-9 h-9" />
+                </a>
+                <a href="https://minion.toss.im/JSMQF2K7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors block xl:hidden"

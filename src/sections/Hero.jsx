@@ -84,14 +84,14 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                 src="/assets/peeca_app.webp"
                 alt="peeca 앱 미리보기"
-                className="w-[85vw] max-w-[630px] max-h-[630px] object-contain"
+                className="w-[85vw] max-w-[600px] max-h-[600px] object-contain"
               />
             </div>
           </div>
 
           {/* ④ 헤드라인 + ⑤ 서브카피 + CTA */}
           <div
-            className="absolute left-[6%] xl:left-[10%] 2xl:left-[15%] top-[55.5%]"
+            className="absolute right-[6%] xl:right-[10%] 2xl:right-[15%] top-[45.5%]"
             style={{
               transform: `translate(${offset.x * 72}px, ${offset.y * 72}px)`,
               transition: 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
