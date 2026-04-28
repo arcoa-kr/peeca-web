@@ -34,7 +34,7 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h3>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://apps.apple.com/us/app/peeca/id6758100118"
+                  href="https://apps.apple.com/kr/app/peeca/id6758100118"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
