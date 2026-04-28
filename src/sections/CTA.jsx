@@ -43,7 +43,7 @@ export default function CTA() {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-          <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
+          <a href="https://apps.apple.com/kr/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
             <img src="/assets/AppStore.png" alt="App Store" className="h-11 block" />
           </a>
           <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank" rel="noopener noreferrer">

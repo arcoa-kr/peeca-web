@@ -54,7 +54,7 @@ export default function CTAFinal() {
          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank">
             <img src="/assets/PlayStore.png" alt="Google Play" className="h-10" />
           </a>
-          <a href="https://apps.apple.com/us/app/peeca/id6758100118" target="_blank">
+          <a href="https://apps.apple.com/kr/app/peeca/id6758100118" target="_blank">
             <img src="/assets/AppStore.png" alt="App Store" className="h-10" />
           </a>
           {/*
