@@ -60,9 +60,9 @@ export default function Problem() {
         </motion.h2>
 
         <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-1) leading-relaxed max-w-xl">
-          어떤 카드가 <b>어디서 얼마나 혜택</b>이 있는지 다 알기 어렵죠. 
+          <b>어디서 얼마나 혜택</b>이 있는지 다 알기 어렵죠. 
           <br />
-          결국 쓰던 카드만 쓰게 됩니다.
+          결국 쓰던 카드만 그냥 씁니다.
         </motion.p>
 
         <motion.div variants={item} className="mt-4 w-full grid grid-cols-1 sm:grid-cols-3 gap-4">

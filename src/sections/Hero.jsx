@@ -102,8 +102,8 @@ export default function Hero() {
               {...fadeIn(0.3)}
               className="text-left text-[2.4rem] font-bold leading-[1.2] tracking-tight"
             >
-              여기<br />
-              내 카드로 할인 돼?
+              내 카드<br />
+              얼마 할인돼?
             </motion.h1>
             <div className="mt-5">
               <motion.p {...fadeIn(0.4)} className="text-[25.5px] leading-relaxed font-bold">
