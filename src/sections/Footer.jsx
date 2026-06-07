@@ -84,7 +84,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackStore('toss', 'footer')}
-                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors block xl:hidden"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors block lg:hidden"
                 >
                   <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9 h-9" />
                 </a>
