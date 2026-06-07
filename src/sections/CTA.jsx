@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Button from '../components/Button'
+import { STORE_LINKS, trackStore } from '../components/gaUtils'
 
 const container = {
   hidden: {},
@@ -39,19 +40,23 @@ export default function CTA() {
         </motion.h2>
 
         <motion.p variants={item} className="pb-4">
-        <img src="/assets/card.png" alt="peeca card" className="h-33" />
+          <img src="/assets/card.png" alt="peeca card" className="h-33" />
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-          <a href="https://apps.apple.com/kr/app/peeca/id6758100118" target="_blank" rel="noopener noreferrer">
+          {/* PC 환경에서 보이는 버튼들 (device: 'pc') */}
+          <a href={STORE_LINKS.apple} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('apple', 'pc', 'cta')}>
             <img src="/assets/AppStore.png" alt="App Store" className="h-11 block" />
           </a>
-          <a href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca" target="_blank" rel="noopener noreferrer">
+          <a href={STORE_LINKS.google} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('google', 'pc', 'cta')}>
             <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
           </a>
-          <a href="https://minion.toss.im/JSMQF2K7">
+          
+          {/* 모바일 환경에서만 보이는 토스 버튼 (device: 'mobile') */}
+          <a href={STORE_LINKS.toss} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('toss', 'mobile', 'cta')}>
             <img src="/assets/Toss.png" alt="앱인토스 미니앱" className="h-11 block xl:hidden" />
           </a>
+          
           <div className="flex items-center justify-center mt-2.5 w-full text-(--color-line) text-base hidden lg:flex">
             <img src="/assets/toss_w.png" alt="toss" className="h-4.5" />
             <p className="ml-1"><b>미니앱</b>은 모바일에서 만나보세요.</p>
