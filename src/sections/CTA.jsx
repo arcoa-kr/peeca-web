@@ -1,6 +1,5 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import Button from '../components/Button'
 import { STORE_LINKS, trackStore } from '../components/gaUtils'
 
 const container = {

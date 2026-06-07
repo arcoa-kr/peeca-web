@@ -15,3 +15,15 @@ export function trackStore(store, location) {
     location: location,    // 👈 'hero', 'cta', 'footer'
   })
 }
+
+export function trackContact(label, location) {
+  // 클릭한 순간 화면 가로 크기 기준으로 pc/mobile 판단
+  const currentDevice = window.innerWidth < 1024 ? 'mobile' : 'pc';
+
+  window.gtag?.('event', 'click_contact', {
+    app_name: 'peeca',
+    contact_label: label,      // 'Contact', 'Terms of Service', 'Privacy Policy' 구분
+    device: currentDevice,     // 'pc' 또는 'mobile' 자동 판별
+    location: location,        // 'footer' 위치 기록
+  })
+}

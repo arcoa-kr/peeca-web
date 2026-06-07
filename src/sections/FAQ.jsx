@@ -25,6 +25,14 @@ const FAQS = [
   },
 ]
 
+// FAQ 전용 GA 추적 함수
+function trackFAQ(question) {
+  window.gtag?.('event', 'click_faq', {
+    app_name: 'peeca',
+    question_title: question, // 어떤 질문을 열었는지 질문 텍스트 그대로 전송
+  })
+}
+
 function FAQItem({ faq, isOpen, onToggle }) {
   return (
     <div className="border-b border-(--color-line) last:border-none">
@@ -32,8 +40,9 @@ function FAQItem({ faq, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-semibold text-(--color-text-1)"
-        style={{ fontSize: '17px' }}>{faq.q}</span>
+        <span className="font-semibold text-(--color-text-1)" style={{ fontSize: '17px' }}>
+          {faq.q}
+        </span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
@@ -67,6 +76,19 @@ export default function FAQ() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
+  // 질문 클릭 제어 함수
+  const handleToggle = (index) => {
+    const isOpening = openIndex !== index; // 현재 닫혀있는데 새로 여는 중인가?
+    
+    if (isOpening) {
+      // 열릴 때만 GA 트래킹 함수 호출 (질문 텍스트를 전달)
+      trackFAQ(FAQS[index].q);
+    }
+    
+    // 아코디언 상태 변경 (이미 열려있으면 닫고, 아니면 해당 인덱스 열기)
+    setOpenIndex(isOpening ? index : null);
+  }
+
   return (
     <SectionWrapper id="faq" bg="#F3F5F8" maxWidth="md" center>
       <motion.div
@@ -93,7 +115,7 @@ export default function FAQ() {
               key={i}
               faq={faq}
               isOpen={openIndex === i}
-              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+              onToggle={() => handleToggle(i)} // 👈 새 핸들러로 교체!
             />
           ))}
         </div>

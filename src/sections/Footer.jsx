@@ -1,4 +1,4 @@
-import { STORE_LINKS, trackStore } from '../components/gaUtils'
+import { STORE_LINKS, trackStore, trackContact } from '../components/gaUtils' // 👈 trackContact 추가
 
 export default function Footer() {
   return (
@@ -26,12 +26,38 @@ export default function Footer() {
             <a href="#reviews" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Reviews</a>
             <a href="#faq" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">FAQ</a>
           </div>
+          
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Support</h3>
-            <a href="https://arcoa-kr.notion.site/330b0d619bef80a6b5d1e69c7b600865" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Contact</a>
-            <a href="https://arcoa-kr.notion.site/peeca-Terms-of-Service-5f8b0d619bef8390ba548133160f417f" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-1) transition-colors">Terms of Service</a>
-            <a href="https://arcoa-kr.notion.site/peeca-Privacy-Policy-cd5b0d619bef8201815d0197eaddcc02" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-2) hover:text-(--color-text-1) transition-colors font-medium">Privacy Policy</a>
+            <a 
+              href="https://arcoa-kr.notion.site/330b0d619bef80a6b5d1e69c7b600865" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={() => trackContact('Contact', 'footer')}
+              className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors"
+            >
+              Contact
+            </a>
+            <a 
+              href="https://arcoa-kr.notion.site/peeca-Terms-of-Service-5f8b0d619bef8390ba548133160f417f" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={() => trackContact('Terms of Service', 'footer')}
+              className="text-sm text-(--color-text-3) hover:text-(--color-text-1) transition-colors"
+            >
+              Terms of Service
+            </a>
+            <a 
+              href="https://arcoa-kr.notion.site/peeca-Privacy-Policy-cd5b0d619bef8201815d0197eaddcc02" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={() => trackContact('Privacy Policy', 'footer')}
+              className="text-sm text-(--color-text-2) hover:text-(--color-text-1) transition-colors font-medium"
+            >
+              Privacy Policy
+            </a>
           </div>
+          
           <div id="download" className="flex flex-col gap-3">
               <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h3>
               <div className="flex flex-col gap-3">
