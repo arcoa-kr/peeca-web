@@ -44,19 +44,15 @@ export default function CTA() {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-          {/* PC 환경에서 보이는 버튼들 (device: 'pc') */}
-          <a href={STORE_LINKS.apple} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('apple', 'pc', 'cta')}>
+          <a href={STORE_LINKS.apple} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('apple', 'cta')}>
             <img src="/assets/AppStore.png" alt="App Store" className="h-11 block" />
           </a>
-          <a href={STORE_LINKS.google} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('google', 'pc', 'cta')}>
+          <a href={STORE_LINKS.google} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('google', 'cta')}>
             <img src="/assets/PlayStore.png" alt="Google Play" className="h-11" />
           </a>
-          
-          {/* 모바일 환경에서만 보이는 토스 버튼 (device: 'mobile') */}
-          <a href={STORE_LINKS.toss} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('toss', 'mobile', 'cta')}>
-            <img src="/assets/Toss.png" alt="앱인토스 미니앱" className="h-11 block xl:hidden" />
+          <a href={STORE_LINKS.toss} target="_blank" rel="noopener noreferrer" onClick={() => trackStore('toss', 'cta')}>
+            <img src="/assets/Toss.png" alt="앱인토스 미니앱" className="h-11 block lg:hidden" />
           </a>
-          
           <div className="flex items-center justify-center mt-2.5 w-full text-(--color-line) text-base hidden lg:flex">
             <img src="/assets/toss_w.png" alt="toss" className="h-4.5" />
             <p className="ml-1"><b>미니앱</b>은 모바일에서 만나보세요.</p>

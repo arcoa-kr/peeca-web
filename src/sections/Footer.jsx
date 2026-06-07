@@ -1,3 +1,5 @@
+import { STORE_LINKS, trackStore } from '../components/gaUtils'
+
 export default function Footer() {
   return (
     <footer className="border-t border-(--color-line) bg-white pt-8 pb-10 px-5 sm:px-10 sm:pt-12 sm:pb-18">
@@ -25,8 +27,8 @@ export default function Footer() {
             <a href="#faq" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">FAQ</a>
           </div>
           <div className="flex flex-col gap-4">
-          <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Support</h3>
-          <a href="https://arcoa-kr.notion.site/330b0d619bef80a6b5d1e69c7b600865" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Contact</a>
+            <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Support</h3>
+            <a href="https://arcoa-kr.notion.site/330b0d619bef80a6b5d1e69c7b600865" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Contact</a>
             <a href="https://arcoa-kr.notion.site/peeca-Terms-of-Service-5f8b0d619bef8390ba548133160f417f" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-3) hover:text-(--color-text-1) transition-colors">Terms of Service</a>
             <a href="https://arcoa-kr.notion.site/peeca-Privacy-Policy-cd5b0d619bef8201815d0197eaddcc02" target="_blank" rel="noopener noreferrer" className="text-sm text-(--color-text-2) hover:text-(--color-text-1) transition-colors font-medium">Privacy Policy</a>
           </div>
@@ -34,24 +36,28 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Download</h3>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://apps.apple.com/kr/app/peeca/id6758100118"
+                  href={STORE_LINKS.apple}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackStore('apple', 'footer')}
                   className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
                 >
                   <img src="/assets/icon-apple.png" alt="App Store" className="w-9 h-9" />
                 </a>
                 <a
-                  href="https://play.google.com/store/apps/details?id=kr.arcoa.peeca"
+                  href={STORE_LINKS.google}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackStore('google', 'footer')}
                   className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
                 >
                   <img src="/assets/icon-google.png" alt="Google Play" className="w-9 h-9" />
                 </a>
-                <a href="https://minion.toss.im/JSMQF2K7"
+                <a 
+                  href={STORE_LINKS.toss}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackStore('toss', 'footer')}
                   className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors block xl:hidden"
                 >
                   <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9 h-9" />

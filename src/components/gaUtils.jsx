@@ -4,14 +4,14 @@ export const STORE_LINKS = {
   toss: 'https://minion.toss.im/JSMQF2K7',
 }
 
-// store: 'apple' | 'google' | 'toss'
-// device: 'pc' | 'mobile'
-// location: 'hero' | 'cta' | 'footer'
-export function trackStore(store, device, location) {
+export function trackStore(store, location) {
+  // 클릭한 순간 화면 가로 크기가 1024px 미만이면 'mobile', 이상이면 'pc'
+  const currentDevice = window.innerWidth < 1024 ? 'mobile' : 'pc';
+
   window.gtag?.('event', 'click_store', {
     app_name: 'peeca',
     store: store,
-    device: device,
-    location: location,
+    device: currentDevice, // 👈 자바스크립트가 알아서 'pc' 또는 'mobile'
+    location: location,    // 👈 'hero', 'cta', 'footer'
   })
 }
