@@ -16,14 +16,14 @@ const POINTS = [
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
     title: '계산대 앞은 너무 짧다.',
-    text: '카드 앱 열고 혜택 찾을 시간이 없어요.',
+    text: '카드사마다 앱을 열고 찾을 시간이 없어요.',
   },
   {
     icon: CreditCard,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '왜 만든 카드인지 모르겠다.',
-    text: '분명 필요했을 텐데, 연회비만 나가고 있어요.',
+    title: '왜 만든 카드인지 모른다.',
+    text: '분명 필요했을 텐데... 연회비만 나가요.',
   },
 ]
 
@@ -56,13 +56,13 @@ export default function Problem() {
           variants={item}
           className="text-[1.75rem] sm:text-[2.25rem] font-bold leading-[1.35] tracking-tight text-(--color-text-1) max-w-2xl"
         >
-          카드 혜택<br />다 쓰고 있나요?
+          카드 혜택<br />잘 쓰고 있나요?
         </motion.h2>
 
         <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-1) leading-relaxed max-w-xl">
           <b>어디서 얼마나 혜택</b>이 있는지 다 알기 어렵죠. 
           <br />
-          결국 쓰던 카드만 그냥 씁니다.
+          결국 쓰던 카드를 계속 씁니다.
         </motion.p>
 
         <motion.div variants={item} className="mt-4 w-full grid grid-cols-1 sm:grid-cols-3 gap-4">

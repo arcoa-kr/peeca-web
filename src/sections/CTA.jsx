@@ -34,7 +34,7 @@ export default function CTA() {
           variants={item}
           className="text-[2rem] sm:text-[2.5rem] font-semibold leading-[1.6] tracking-tight text-white"
         >
-          다음 결제부터
+          내 카드 할인 찾기
           <span className="text-3xl font-normal block">peeca<br />✦</span>
         </motion.h2>
 
