@@ -103,14 +103,14 @@ export default function Hero() {
               className="text-left text-[2.4rem] font-bold leading-[1.2] tracking-tight"
             >
               내 카드<br />
-              얼마 할인돼?
+              얼마나 할인돼?
             </motion.h1>
             <div className="mt-5">
               <motion.p {...fadeIn(0.4)} className="text-[25.5px] leading-relaxed font-bold">
-                내 카드 혜택, 5초면 확인
+                연동 없이, 카드 이름만으로
               </motion.p>
               <motion.p {...fadeIn(0.5)} className="text-lg leading-relaxed mb-8 font-semibold">
-                지금 가장 유리한 내 카드를 찾아요.
+                내 카드 혜택을 쉽게 확인하세요.
               </motion.p>
               <motion.div {...fadeIn(0.8)}>
                 <StoreButtons />
@@ -150,14 +150,14 @@ export default function Hero() {
             {...fadeIn(0.3)}
             className="text-center text-[2rem] font-bold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
           >
-            여기, 내 카드 할인 돼?
+            내 카드 얼마나 할인돼?
           </motion.h1>
           <motion.p
             {...fadeIn(0.4)}
             className="text-center text-base leading-relaxed mb-6 text-(--color-text-1) font-medium"
           >
-            <span className="text-2xl leading-relaxed font-bold">내 카드 혜택, 5초면 확인</span><br />
-            지금 가장 유리한 내 카드를 찾아요.
+            <span className="text-2xl leading-relaxed font-bold">연동 없이, 카드 이름만으로</span><br />
+            내 카드 혜택을 쉽게 확인하세요.
           </motion.p>
 
           {/* CTA */}

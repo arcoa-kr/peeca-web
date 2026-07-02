@@ -31,6 +31,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Support</h3>
             <a 
               href="https://arcoa-kr.notion.site/330b0d619bef80a6b5d1e69c7b600865" 
+              
               target="_blank" 
               rel="noopener noreferrer" 
               onClick={() => trackContact('Contact', 'footer')}
