@@ -44,13 +44,13 @@ export default function Example() {
             variants={item}
             className="text-[1.75rem] sm:text-[2.25rem] font-bold tracking-tight text-(--color-text-1)"
           >
-            몰랐던 혜택도 찾아요
+            내 카드 여기 할인될까?
           </motion.h2>
-          {/*}
+          {
           <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-2) leading-relaxed">
-            다 아는 혜택 말고, 몰랐던 혜택이 진짜예요.
+            다 아는 혜택 말고, 몰랐던 혜택까지 찾아요.
           </motion.p>
-          */}
+          }
         </div>
 
         {/* 카드 그리드 */}
