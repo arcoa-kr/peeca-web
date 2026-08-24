@@ -8,22 +8,22 @@ const POINTS = [
     icon: ListChecks,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '혜택을 다 외울 수 없다.',
-    text: '카드의 모든 혜택을 기억하는 건 힘들어요.',
+    title: '혜택을 다 외울 수 없어요',
+    text: '카드의 모든 혜택을 기억할 수 없어요.',
   },
   {
     icon: Timer,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '계산대 앞은 너무 짧다.',
-    text: '카드사마다 앱을 열고 찾을 시간이 없어요.',
+    title: '찾아볼 시간이 부족해요',
+    text: '카드사마다 하나씩 앱을 열기 힘들어요.',
   },
   {
     icon: CreditCard,
     color: 'bg-(--color-primary)/9',
     iconColor: 'text-(--color-primary)',
-    title: '왜 만든 카드인지 모른다.',
-    text: '분명 필요했을 텐데... 연회비만 나가요.',
+    title: '설명이 복잡해요',
+    text: '실적에 한도에... 계산이 너무 어려워요.',
   },
 ]
 
@@ -56,7 +56,7 @@ export default function Problem() {
           variants={item}
           className="text-[1.75rem] sm:text-[2.25rem] font-bold leading-[1.35] tracking-tight text-(--color-text-1) max-w-2xl"
         >
-          카드 혜택<br />잘 쓰고 있나요?
+          이런 적 많죠?
         </motion.h2>
 
         <motion.p variants={item} className="text-base sm:text-lg text-(--color-text-1) leading-relaxed max-w-xl">
