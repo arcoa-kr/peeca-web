@@ -7,18 +7,18 @@ const TABS = [
     id: 'use',
     label: '혜택 확인',
     steps: [
-      { number: '1', title: '상황 선택', desc: '사용할 곳을 선택해요.', src: '/assets/mockup/HOME-category.webp', alt: '카테고리 선택 화면' },
+      { number: '1', title: '상황 선택', desc: '사용하려는 곳을 선택해요.', src: '/assets/mockup/HOME-category.webp', alt: '카테고리 선택 화면' },
       { number: '2', title: '금액 입력', desc: '얼마를 사용할지 입력해요.', src: '/assets/mockup/HOME-amount.webp', alt: '금액 입력 화면' },
-      { number: '3', title: '혜택 확인', desc: '가장 유리한 내 카드를 확인해요.', src: '/assets/mockup/Result.webp', alt: '추천 결과 화면' },
+      { number: '3', title: '혜택 확인', desc: '내 카드의 혜택 금액을 확인해요.', src: '/assets/mockup/Result.webp', alt: '추천 결과 화면' },
     ],
   },
   {
     id: 'register',
     label: '카드 등록',
     steps: [
-      { number: '1', title: '카드사 선택', desc: '사용 중인 카드사를 골라요.', src: '/assets/mockup/REG-company.webp', alt: '카드사 선택 화면' },
-      { number: '2', title: '카드이름 검색', desc: '인증 없이 카드이름만 검색하세요.', src: '/assets/mockup/REG-search.webp', alt: '카드 검색 화면' },
-      { number: '3', title: '등록 하기!', desc: '끝! 바로 사용할 수 있어요.', src: '/assets/mockup/REG-done.webp', alt: '등록 완료 화면' },
+      { number: '1', title: '카드사 선택', desc: '카드사를 선택해요.', src: '/assets/mockup/REG-company.webp', alt: '카드사 선택 화면' },
+      { number: '2', title: '카드이름 검색', desc: '카드 이름을 바로 찾아보세요.', src: '/assets/mockup/REG-search.webp', alt: '카드 검색 화면' },
+      { number: '3', title: '등록 하기!', desc: '끝! 어떤 카드도 쉽게 등록돼요.', src: '/assets/mockup/REG-done.webp', alt: '등록 완료 화면' },
     ],
   },
   {
