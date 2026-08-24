@@ -105,12 +105,12 @@ export default function Hero() {
               내 카드<br />
               얼마나 할인돼?
             </motion.h1>
-            <div className="mt-5">
+            <div className="mt-7">
               <motion.p {...fadeIn(0.4)} className="text-[25.5px] leading-relaxed font-bold">
                 연동 없이, 카드 이름만으로
               </motion.p>
-              <motion.p {...fadeIn(0.5)} className="text-lg leading-relaxed mb-8 font-semibold">
-                내 카드 혜택을 쉽게 확인하세요.
+              <motion.p {...fadeIn(0.5)} className="text-lg leading-relaxed mb-10 font-semibold">
+                내 카드 혜택을 쉽게 확인하세요.<br />같은 조건에서 혜택이 더 큰 카드도 찾아줘요.
               </motion.p>
               <motion.div {...fadeIn(0.8)}>
                 <StoreButtons />
@@ -142,22 +142,22 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             src="/assets/peeca_app.webp"
             alt="peeca 앱 미리보기"
-            className="w-[93%] max-w-[510px] max-h-[510px] object-contain mb-8"
+            className="w-[93%] max-w-[510px] max-h-[510px] object-contain mb-5"
           />
 
           {/* 헤드라인 */}
           <motion.h1
             {...fadeIn(0.3)}
-            className="text-center text-[2rem] font-bold leading-[1.2] tracking-tight text-(--color-text-1) mb-4"
+            className="text-center text-[2rem] font-bold leading-[1.2] tracking-tight text-(--color-text-1) mb-3"
           >
             내 카드 얼마나 할인돼?
           </motion.h1>
           <motion.p
             {...fadeIn(0.4)}
-            className="text-center text-base leading-relaxed mb-6 text-(--color-text-1) font-medium"
+            className="text-center text-base leading-relaxed mb-7 text-(--color-text-1) font-medium"
           >
-            <span className="text-2xl leading-relaxed font-bold">연동 없이, 카드 이름만으로</span><br />
-            내 카드 혜택을 쉽게 확인하세요.
+            <p className="text-2xl leading-relaxed font-bold mb-1">연동 없이, 카드 이름만으로</p>
+            내 카드 혜택을 쉽게 확인하세요.<br />같은 조건에서 혜택이 더 큰 카드도 찾아줘요.
           </motion.p>
 
           {/* CTA */}
