@@ -1,7 +1,7 @@
 export const STORE_LINKS = {
   google: 'https://play.google.com/store/apps/details?id=kr.arcoa.peeca',
   apple: 'https://apps.apple.com/kr/app/peeca/id6758100118',
-  toss: 'https://minion.toss.im/lGlSc7hC',
+  toss: 'https://tossminiapp.com/d/peeca/launch?referrer=appsintoss.common_module_share',
 }
 
 export function trackStore(store, location) {

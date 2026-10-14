@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         {/* 링크 그룹 */}
-        <div className="flex gap-10 sm:gap-15 order-1 md:order-2">
+        <div className="flex gap-15 order-1 md:order-2">
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold text-(--color-text-1) mb-1">Explore</h3>
             <a href="#problem" className="text-sm text-(--color-text-3) hover:text-(--color-text-2) transition-colors">Problems</a>
@@ -46,7 +46,7 @@ export default function Footer() {
               onClick={() => trackContact('Terms of Service', 'footer')}
               className="text-sm text-(--color-text-3) hover:text-(--color-text-1) transition-colors"
             >
-              Terms of Service
+              Terms
             </a>
             <a 
               href="https://arcoa-kr.notion.site/peeca-Privacy-Policy-cd5b0d619bef8201815d0197eaddcc02" 
@@ -55,7 +55,7 @@ export default function Footer() {
               onClick={() => trackContact('Privacy Policy', 'footer')}
               className="text-sm text-(--color-text-2) hover:text-(--color-text-1) transition-colors font-medium"
             >
-              Privacy Policy
+              Privacy
             </a>
           </div>
           
@@ -85,7 +85,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackStore('toss', 'footer')}
-                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors block lg:hidden"
+                  className="w-10 h-10 rounded-full bg-black/80 flex items-center justify-center hover:bg-(--color-primary) transition-colors"
                 >
                   <img src="/assets/icon-toss.png" alt="토스 미니앱" className="w-9 h-9" />
                 </a>

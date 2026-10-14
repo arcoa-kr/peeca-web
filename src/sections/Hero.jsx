@@ -156,7 +156,7 @@ export default function Hero() {
             {...fadeIn(0.4)}
             className="text-center text-base leading-relaxed mb-7 text-(--color-text-1) font-medium"
           >
-            <p className="text-2xl leading-relaxed font-bold mb-1">연동 없이, 카드 이름만으로</p>
+            <span className="text-2xl leading-relaxed font-bold mb-1">연동 없이, 카드 이름만으로</span>
             내 카드 혜택을 쉽게 확인하세요.<br />같은 조건에서 혜택이 더 큰 카드도 찾아줘요.
           </motion.p>
 
