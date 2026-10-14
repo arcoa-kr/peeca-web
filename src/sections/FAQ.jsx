@@ -20,8 +20,16 @@ const FAQS = [
     a: '아니요.\n카드 이름만 넣으면 바로 사용할 수 있어요.',
   },
   {
-    q: '카드가 없어도 돼요?',
-    a: '네, peeca는 카드 이름만 알면 사용할 수 있어요.\n필요한 카드를 쉽게 등록, 삭제하며 비교할 수도 있어요.',
+    q: '관심 있는 카드도 볼 수 있어요?',
+    a: '네, peeca는 카드 이름만 알면 사용할 수 있어요.\n필요한 카드를 쉽게 등록, 삭제하며 혜택을 비교할 수 있어요.',
+  },
+  {
+    q: '내 카드가 검색해도 안 나와요 😭',
+    a: '카드 이름을 알려주시면, 확인 후 등록해 드립니다.',
+    link: {
+      text: '카드 이름 알려주기',
+      url: 'https://arcoa-kr.notion.site/d42b0d619bef824ca4b9813f805c6ac9',
+    },
   },
 ]
 
@@ -33,6 +41,7 @@ function trackFAQ(question) {
   })
 }
 
+
 function FAQItem({ faq, isOpen, onToggle }) {
   return (
     <div className="border-b border-(--color-line) last:border-none">
@@ -40,7 +49,10 @@ function FAQItem({ faq, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-semibold text-(--color-text-1)" style={{ fontSize: '17px' }}>
+        <span
+          className="font-semibold text-(--color-text-1)"
+          style={{ fontSize: '17px' }}
+        >
           {faq.q}
         </span>
         <motion.span
@@ -61,9 +73,20 @@ function FAQItem({ faq, isOpen, onToggle }) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-base font-medium text-(--color-text-3) leading-relaxed whitespace-pre-line text-left">
-              {faq.a}
-            </p>
+            <div className="pb-6 text-base font-medium text-(--color-text-3) leading-relaxed text-left">
+              <p className="whitespace-pre-line">{faq.a}</p>
+                {faq.link && (
+                  <a
+                    href={faq.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-3 px-3 py-1.5 rounded-lg bg-[#F3F5F8] text-(--color-text-2) text-[15px] font-medium no-underline hover:bg-[#E9ECF2] transition-colors"
+                  >
+                    {faq.link.text}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
